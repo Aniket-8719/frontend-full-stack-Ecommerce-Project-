@@ -48,7 +48,8 @@ const apikeyConfig = {
   },
 };
 
-const API_URL =  process.env.REACT_APP_BACKEND_URL;  // Your backend URL 
+//backend URL 
+const API_URL =  process.env.REACT_APP_BACKEND_URL; 
 
 // Login
 export const login = (email, password) => async (dispatch) => {
