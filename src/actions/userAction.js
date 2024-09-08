@@ -63,7 +63,7 @@ export const login = (email, password) => async (dispatch) => {
       withCredentials: true,  // Send cookies with the request
     };
     
-    const { data } = await axios.post(`${API_URL}/api/v1/login`, { email, password }, config);
+    const { data } = await axios.post(`https://backend-full-stack-ecommerce-project-8oug.onrender.com/api/v1/login`, { email, password }, config);
     
     localStorage.setItem("auth", data.token);  // Store token in localStorage (if necessary)
     
@@ -92,7 +92,7 @@ export const loadUser = () => async (dispatch) => {
       withCredentials: true,  // Send cookies with the request
     };
 
-    const { data } = await axios.get(`${API_URL}/api/v1/me`, config);
+    const { data } = await axios.get(`https://backend-full-stack-ecommerce-project-8oug.onrender.com/api/v1/me`, config);
 
     dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
   } catch (error) {
@@ -134,7 +134,7 @@ export const logout = () => async (dispatch) => {
       withCredentials: true,  // Send cookies with the request
     };
 
-    await axios.get(`${API_URL}/api/v1/logout`, config);
+    await axios.get(`https://backend-full-stack-ecommerce-project-8oug.onrender.com/api/v1/logout`, config);
     localStorage.removeItem("auth");
     sessionStorage.removeItem('adminAccessToastShown');
     dispatch({ type: LOGOUT_USER_SUCCESS });
