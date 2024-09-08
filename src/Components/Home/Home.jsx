@@ -38,8 +38,6 @@ const Home = () => {
         font-semibold mb-8 border-b-2 border-gray-500 m-auto p-[1vmax]"
           >
             Featured Products
-            {process.env.REACT_APP_BACKEND_URL}
-            {process.env.REACT_APP_BACKEND_URL === 'production' ? <h1>condition match</h1> : <h1>condition match</h1>}
           </h1>
           <div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 items-center justify-center px-8  mx-auto md:mx-auto lg:max-w-[1400px] md:max-w-[900px]"
